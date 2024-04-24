@@ -29,11 +29,38 @@ input:not([type="checkbox"]) {
     }
 }
 
-/*.select {
+.select {
     position: relative;
     min-width: 300px;
-    background-image:
-}*/
+
+
+    .selected {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: 1px solid var(--color-gray-400);
+        cursor: pointer;
+    }
+
+    .select-options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-400);
+        z-index: 10;
+
+        .option {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background-color: var(--color-gray-400);
+        }
+    }
+}
 
 input[type=checkbox] {
     height: 20px;
@@ -51,12 +78,12 @@ form {
         display: grid;
 
         input {
-            padding: 16px;
+            padding: 11px;
         }
     }
 
     .checkbox-group {
-        input[type=checbox] {
+        input[type=checkbox] {
             margin-right: 10px;
         }
 

@@ -1,0 +1,101 @@
+.account-details {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 150px;
+    margin-bottom: 70px;
+
+    .container {
+
+        .content {
+            margin-top: 50px;
+            width: 100%;
+
+            .form-basic {
+                form {
+                    padding: 1rem;
+
+                    h5 {
+                        color: var(--color-theme);
+                    }
+
+                    .form-content {
+                        display: grid;
+                        gap: 1rem 2rem;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-areas: "firstname lastname" "email phone" "bio bio" "buttons buttons";
+
+                        #form-firstname {
+                            grid-area: firstname;
+                        }
+
+                        #form-lastname {
+                            grid-area: lastname;
+                        }
+
+                        #form-email {
+                            grid-area: email;
+                        }
+
+                        #form-phone {
+                            grid-area: phone;
+                        }
+
+                        #form-bio {
+                            grid-area: bio;
+                        }
+
+                        .form-button {
+                            grid-area: buttons;
+                            margin: 20px 0;
+                            display: flex;
+                            gap: 20px;
+                        }
+                    }
+                }
+            }
+
+            .form-address {
+                margin-top: 30px;
+
+                form {
+                    padding: 1rem;
+
+                    h5 {
+                        color: var(--color-theme);
+                    }
+
+                    .form-content {
+                        display: grid;
+                        gap: 1rem 2rem;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-areas: "addressline_1 addressline_1" "addressline_2 addressline_2" "postalcode city" "buttons buttons";
+
+                        #form-addressline-1 {
+                            grid-area: addressline_1;
+                        }
+
+                        #form-addressline-2 {
+                            grid-area: addressline_2;
+                        }
+
+                        #form-postalcode {
+                            grid-area: postalcode;
+                        }
+
+                        #form-city {
+                            grid-area: city;
+                        }
+
+
+                        .form-button {
+                            grid-area: buttons;
+                            margin: 20px 0;
+                            display: flex;
+                            gap: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

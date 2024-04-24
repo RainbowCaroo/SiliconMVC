@@ -1,91 +1,52 @@
-.showcase {
+#showcase {
     position: relative;
-    margin-bottom: 80px;
 
-    @include lg {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 0px;
-    }
-
-    img {
-        position: relative;
-        z-index: -1;
-        width: 100%;
-
-        @include lg {
-            width: 45%;
-        }
-    }
 
     .container {
-        height: 100%;
-
-        @include lg {
-            position: absolute;
-            left: 0;
-            right: 0;
-        }
+        display: flex;
+        margin-top: 4rem;
+        margin-bottom: 8rem;
 
         .content {
-            margin-top: 0px;
-            width: 100%;
-            text-align: center;
-
-            @include lg {
-                margin-top: 100px;
-                width: 40%;
-                text-align: left;
-            }
+            width: 40%;
 
             h1 {
-                @include h2;
-
-                @include lg {
-                    @include d4;
-                }
+                @include d4;
+                line-height: 1.4;
             }
 
             p {
-                margin: 20px 0 40px 0;
-                @include text-m;
-
-                @include lg {
-                    margin: 40px 0 50px 0;
-                    @include text-lg;
-                }
+                margin: 2rem 0;
             }
 
-            .btn-theme-s {
+            a {
                 display: inline-block;
             }
 
-            h6 {
-                margin: 150px 0 30px 0;
-                display: none;
+            .largest-brands {
+                margin-top: 6rem;
+                margin-bottom: 6rem;
 
-                @include lg {
-                    margin: 100px 0 30px 0;
+                h6 {
+                    margin-bottom: 2rem;
+                }
+
+                .brands {
                     display: flex;
+                    gap: 3rem;
+
+
+                    img {
+                        width: 120px;
+                    }
                 }
             }
+        }
 
-            .brands {
-                display: none;
-                gap: 30px;
-
-                @include lg {
-                    display: flex;
-                }
-
-                img {
-                    width: 120px;
-                    // position: relative;
-                }
-            }
-
-
+        .background-image {
+            position: absolute;
+            right: 0;
+            width: 45%;
         }
     }
-
 }

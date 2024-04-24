@@ -5,16 +5,18 @@
 
 <section class="courses">
 	<div class="container">
-		<h1>Courses</h1>
-		<form id="form-filters">
-			<select>
-				<option>All categories</option>
-			</select>
-			<div>
-				<input id="searchQuery" name="searchQuery" placeholder="Search courses" />
-				<i class="fa-solid fa-magnifying-glass"></i>
-			</div>
-		</form>
+		<div class="header">
+			<h1>Courses</h1>
+			<form id="form-filters">
+				<select>
+					<option>All categories</option>
+				</select>
+				<div class="input-search-group">
+					<input id="searchQuery" name="searchQuery" placeholder="Search courses" />
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</div>
+			</form>
+		</div>
 
 		<div class="course-items">
 			@if (Model.Courses != null)
@@ -46,7 +48,7 @@
 									<i class="fa-regular fa-clock"></i> @course.Hours hours
 								</div>
 								<div class="likes">
-									<i class="fa-regular fa-thumbs-up"></i> @course.LikesInProcent (@course.LikesInNumbers)
+									<i class="fa-regular fa-thumbs-up"></i> @course.LikesInProcent @course.LikesInNumbers
 								</div>
 							</div>
 						</div>
